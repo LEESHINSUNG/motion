@@ -61,13 +61,13 @@ body {
   color: var(--accent-color);
 }
 
-.control_panel {
+.control-panel {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.create_button {
+.create-button {
   margin: 0.1em 0.2em;
   text-align: center;
   user-select: none;
