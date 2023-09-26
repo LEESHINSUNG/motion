@@ -28,6 +28,3 @@ export class VideoComponent extends BaseComponent<HTMLElement> {
     return url
   }
 }
-
-
-/* <iframe width="950" height="534" src="https://www.youtube.com/embed/b-MyiR3HUzo" title="일본생활 | 군마에서의 여유로운 일상 群馬でのゆとりがある日常" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */
