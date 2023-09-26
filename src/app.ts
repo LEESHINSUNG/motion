@@ -1,3 +1,4 @@
+// 주의 확장자 붙이기
 import { PageComponent } from './components/page/page.js';
 import { ImageComponent } from './components/page/item/images.js';
 

@@ -1,4 +1,28 @@
-export class ImageComponent {
+import { BaseComponent } from "../../component.js"
+// 웹팩같은 툴을 이용하면 확장자를 작성하지 않아도 자동으로 생성된다.
+
+export class ImageComponent extends BaseComponent<HTMLElement> {
+  constructor(title: string, url: string) {
+    super(`
+      <section class="image">
+        <div class="image__holder"><img class="image__thumbnail" /></div>
+        <p class="image__title"></p>
+      </section>
+    `)
+
+    // 변수(요소)를 만들어 필요한 부분만 설정하는 것이 좋다.
+    const imageElement = this.element.querySelector('.image__thumbnail')! as HTMLImageElement
+    imageElement.src = url
+    imageElement.alt = title
+
+    const titleElement = this.element.querySelector('.image__title')! as HTMLParagraphElement
+    titleElement.textContent = title
+  }
+
+}
+
+
+/* export class ImageComponent {
   private element: HTMLElement
   constructor(title: string, url: string) {
     const template = document.createElement('template')
@@ -12,7 +36,7 @@ export class ImageComponent {
   </section>`
     this.element = template.content.firstElementChild! as HTMLElement
 
-    // 변수(요소)를 만들에 필요한 부분만 설정하는 것이 좋다.
+    // 변수(요소)를 만들어 필요한 부분만 설정하는 것이 좋다.
     const imageElement = this.element.querySelector('.image__thumbnail')! as HTMLImageElement
     imageElement.src = url
     imageElement.alt = title
@@ -25,3 +49,6 @@ export class ImageComponent {
     parent.insertAdjacentElement(position, this.element);
   }
 }
+
+
+ */
